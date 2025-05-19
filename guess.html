@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+    <link rel="stylesheet" href="guessstyle.css">
+</head>
+<body>
+    <div>
+    <h1>Guess the Number!!</h1>
+<input id="NO" placeholder="Enter the number">
+<button onclick="dom()">Verify</button>
+<p id="yes">You are Right/Wrong</p>
+<p id="total">Score=10</p>
+</div>
+<script>
+var a=document.getElementById("NO")
+var b=document.getElementById("yes")
+var e=document.getElementById("total")
+
+var c=10
+function dom()
+{
+    entervalue=a.value
+    var d=Math.floor(Math.random()*10)+1
+    if(entervalue==d){
+    b.textContent="You are Right!!!"
+    c=c+1
+    e.textContent="Score:"+c
+    }
+    else{
+        b.textContent="You are Wrong"
+        c-=1
+        b.textContent="Answer is "+d
+        e.textContent="Score:"+c
+    }
+    e.textContent=("Your Score:"+c)
+}
+
+
+</script>
+</body>
+</html>
+
+
